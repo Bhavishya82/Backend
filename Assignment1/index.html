@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Rivera — Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header class="site-header">
+  <span class="logo">A.R.</span>
+  <nav class="main-nav">
+    <a href="#work">work</a>
+    <a href="#about">about</a>
+    <a href="#stack">stack</a>
+    <a href="#contact">contact</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <p class="eyebrow">// portfolio.init()</p>
+      <h1>Alex Rivera<span class="cursor-dot">.</span></h1>
+      <p class="role">Software Developer — backend systems &amp; developer tooling</p>
+      <p class="hero-copy">I build things that hold up under load: APIs that don't fall over,
+      pipelines that don't lie about their status, and tools other engineers actually
+      want to use.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">See the work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="terminal" role="img" aria-label="Animated terminal showing a profile object being built">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">profile.js</span>
+      </div>
+      <pre class="terminal-body"><code id="typed-code"></code><span class="type-cursor">|</span></pre>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <h2 class="section-heading"><span class="tag">/* selected work */</span>Projects</h2>
+    <div class="project-list">
+
+      <article class="project">
+        <div class="project-index">01</div>
+        <div class="project-body">
+          <h3>Ledger — Event-Sourced Billing Engine</h3>
+          <p>A billing core built on an append-only event log, so every invoice can be
+          replayed and explained, not just trusted. Handles retries, disputes, and
+          partial refunds without losing the plot.</p>
+          <ul class="project-tags">
+            <li>Go</li><li>PostgreSQL</li><li>Kafka</li>
+          </ul>
+        </div>
+        <a class="project-link" href="#" aria-label="View Ledger project">→</a>
+      </article>
+
+      <article class="project">
+        <div class="project-index">02</div>
+        <div class="project-body">
+          <h3>Fieldglass — CLI for API Contract Testing</h3>
+          <p>A command-line tool that diffs live API responses against an OpenAPI
+          spec on every deploy, so contract drift gets caught in CI instead of by
+          a confused downstream team.</p>
+          <ul class="project-tags">
+            <li>Rust</li><li>OpenAPI</li><li>CI/CD</li>
+          </ul>
+        </div>
+        <a class="project-link" href="#" aria-label="View Fieldglass project">→</a>
+      </article>
+
+      <article class="project">
+        <div class="project-index">03</div>
+        <div class="project-body">
+          <h3>Quietroom — Realtime Ops Dashboard</h3>
+          <p>A calmer alternative to noisy monitoring dashboards: fewer widgets, more
+          judgment. Surfaces the three numbers that matter and gets out of the way
+          otherwise.</p>
+          <ul class="project-tags">
+            <li>TypeScript</li><li>WebSockets</li><li>D3</li>
+          </ul>
+        </div>
+        <a class="project-link" href="#" aria-label="View Quietroom project">→</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2 class="section-heading"><span class="tag">/* about */</span>Background</h2>
+    <div class="about-grid">
+      <p class="about-copy">
+        I've spent the last several years working on systems where being wrong is
+        expensive — payments, infrastructure, anything with an on-call rotation
+        attached to it. I care more about a system's failure modes than its demo.
+        Outside of work I mentor junior engineers and contribute to a couple of
+        open-source developer tools.
+      </p>
+      <dl class="about-facts">
+        <div><dt>Based in</dt><dd>Remote — GMT-5</dd></div>
+        <div><dt>Focus</dt><dd>Backend systems, dev tooling</dd></div>
+        <div><dt>Currently</dt><dd>Open to select contract work</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <h2 class="section-heading"><span class="tag">/* stack */</span>Tools I reach for</h2>
+    <div class="stack-grid">
+      <div class="stack-group">
+        <h3>Languages</h3>
+        <p>Go, TypeScript, Rust, Python</p>
+      </div>
+      <div class="stack-group">
+        <h3>Infra</h3>
+        <p>Postgres, Kafka, Docker, Terraform</p>
+      </div>
+      <div class="stack-group">
+        <h3>Practices</h3>
+        <p>Event sourcing, contract testing, observability</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <h2 class="section-heading"><span class="tag">/* contact */</span>Let's talk</h2>
+    <p class="contact-copy">Have something worth building? I'm happy to hear about it.</p>
+    <form class="contact-form" id="contact-form">
+      <div class="field-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p class="form-status" id="form-status" role="status"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 Alex Rivera</span>
+  <span class="footer-note">built with HTML, CSS &amp; JS — no framework required</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
